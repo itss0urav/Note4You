@@ -10,7 +10,7 @@ function Introduction() {
         muted
         loop
         src={v3}
-        className=" blur-sm absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
+        className=" blur-md absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
       ></video>
       <div className="absolute inset-0 bg-gradient-to-center from-transparent via-black to-transparent opacity-50 z-20"></div>
       <div className="absolute top-0 right-0 p-6 space-x-4 z-30">
@@ -39,24 +39,24 @@ function Introduction() {
             <h1 className="font-roboto font-extrabold text-4xl md:text-6xl lg:text-8xl bg-gradient-to-r from-cyan-300 to-sky-500 bg-clip-text text-transparent  mb-4 tracking-wide neon-text shadow-white">
               Note4You
             </h1>
-            <p className=" font-bold text-center hidden md:flex bg-gradient-to-r from-cyan-300 to-sky-500 bg-clip-text text-transparent  text-sm md:text-lg lg:text-xl  neon-text shadow-white">
-              Hello there! We’re thrilled to have you here. Note4You is your new
+            <p className="[text-shadow:0px_0px_10px_var(--tw-shadow-color)] shadow-cyan-500 p-3 backdrop-blur-lg rounded-lg font-bold text-center hidden md:flex bg-gradient-to-r from-cyan-300 to-sky-500 bg-clip-text text-transparent  text-sm md:text-lg lg:text-xl  neon-text ">
+              Hello there! We're thrilled to have you here. Note4You is your new
               digital companion designed to make note-taking easy, efficient,
               and enjoyable. Our platform offers a seamless experience for
               creating, managing, and accessing your notes from anywhere,
-              anytime. Whether you’re jotting down ideas, creating a to-do list,
+              anytime. Whether you're jotting down ideas, creating a to-do list,
               or keeping a diary, Note4You is here to simplify your life and
               keep your thoughts organized.
             </p>
           </div>
         </div>
       </div>
-      <p className="font-bold text-center z-50 p-2 md:hidden flex bg-gradient-to-r from-cyan-300 to-sky-500 bg-clip-text text-transparent  text-sm md:text-lg lg:text-xl  neon-text shadow-white">
-        Hello there! We’re thrilled to have you here. Note4You is your new
+      <p className="[text-shadow:0px_0px_10px_var(--tw-shadow-color)] shadow-cyan-500 backdrop-blur-lg rounded-lg  font-bold text-center z-50 p-2 md:hidden flex bg-gradient-to-r from-cyan-300 to-sky-500 bg-clip-text text-transparent  text-sm md:text-lg lg:text-xl  neon-text ">
+        Hello there! We're thrilled to have you here. Note4You is your new
         digital companion designed to make note-taking easy, efficient, and
         enjoyable. Our platform offers a seamless experience for creating,
         managing, and accessing your notes from anywhere, anytime. Whether
-        you’re jotting down ideas, creating a to-do list, or keeping a diary,
+        you're jotting down ideas, creating a to-do list, or keeping a diary,
         Note4You is here to simplify your life and keep your thoughts organized.
       </p>
 

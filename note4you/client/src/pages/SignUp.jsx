@@ -26,7 +26,7 @@ export default function SignUp() {
       return;
     }
     try {
-      const response = await axios.post("/users", user);
+      const response = await axios.post("/usersignup", user);
       console.log(response.data);
       sessionStorage.setItem("user", JSON.stringify(res.data.user));
     } catch (error) {

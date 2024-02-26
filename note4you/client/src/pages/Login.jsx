@@ -21,7 +21,7 @@ export default function Login() {
     e.preventDefault();
     try {
       // Make the axios request
-      const response = await axios.post("/api/login", user);
+      const response = await axios.post("/userlogin", user);
       console.log(response.data);
       // Simulate successful login
       setTimeout(() => {
@@ -39,14 +39,14 @@ export default function Login() {
         muted
         loop
         src={v3}
-        className="   absolute inset-0 w-full h-full object-cover z-[-1]"
+        className=" absolute inset-0 w-full h-full object-cover z-[-1]"
       ></video>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className=" backdrop-blur-md p-2 rounded-md flex items-center mb-6 text-2xl font-semibold text-white ">
-          <img src="" className="w-8 h-8 mr-2" alt="logo" />
+          <img src="" className=" w-8 h-8 mr-2" alt="logo" />
           Note4You
         </div>
-        <div className="w-full   shadow backdrop-blur-md rounded-md md:mt-0 sm:max-w-md xl:p-0 ">
+        <div className="w-full shadow backdrop-blur-md rounded-md md:mt-0 sm:max-w-md xl:p-0 ">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-sky-300 md:text-2xl ">
               Sign in to your account
