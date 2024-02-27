@@ -1,10 +1,11 @@
 import React from "react";
 import v3 from "../assets/v3.mp4";
 import Navbar from "../components/Navbar";
+import NoteMapper from "../components/NoteMapper";
 export default function Home() {
   return (
     <div>
-      <div className="relative">
+      <div className="">
         <video
           autoPlay
           muted
@@ -14,6 +15,9 @@ export default function Home() {
         ></video>
         <div className="">
           <Navbar />
+        </div>
+        <div className="">
+          <NoteMapper />
         </div>
       </div>
     </div>

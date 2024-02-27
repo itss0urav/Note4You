@@ -5,6 +5,8 @@ import Introduction from "./pages/Introduction";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { Toaster } from "react-hot-toast";
+import CreateNotes from "./pages/CreateNotes";
+
 
 export default function App() {
   return (
@@ -18,6 +20,8 @@ export default function App() {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/" element={<Introduction />} />
+          <Route path="/createnote" element={<CreateNotes />} />
+
         </Routes>
       </BrowserRouter>
     </div>

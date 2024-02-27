@@ -27,6 +27,7 @@ export default function Login() {
       console.log(response.data);
       toast.success("Login Success");
       sessionStorage.setItem("user", JSON.stringify(response.data.user));
+      sessionStorage.setItem("token", JSON.stringify(response.data.token));
 
       // Simulate successful login
       setTimeout(() => {
