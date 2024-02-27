@@ -10,7 +10,7 @@ function Introduction() {
         muted
         loop
         src={v3}
-        className=" blur-md absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
+        className=" absolute top-0 left-0 min-w-full min-h-full object-cover z-0"
       ></video>
       <div className="absolute inset-0 bg-gradient-to-center from-transparent via-black to-transparent opacity-50 z-20"></div>
       <div className="absolute top-0 right-0 p-6 space-x-4 z-30">

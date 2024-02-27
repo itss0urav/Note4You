@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import v3 from "../assets/v3.mp4";
 import axios from "../config/axios";
+import { toast } from "react-hot-toast";
+
 export default function Login() {
   const [user, setUser] = useState({
     email: "",
@@ -23,6 +25,9 @@ export default function Login() {
       // Make the axios request
       const response = await axios.post("/userlogin", user);
       console.log(response.data);
+      toast.success("Login Success");
+      sessionStorage.setItem("user", JSON.stringify(response.data.user));
+
       // Simulate successful login
       setTimeout(() => {
         nav("/home");

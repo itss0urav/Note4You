@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "../config/axios";
 import v3 from "../assets/v3.mp4";
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 export default function SignUp() {
   const [user, setUser] = useState({
@@ -28,9 +29,10 @@ export default function SignUp() {
     try {
       const response = await axios.post("/usersignup", user);
       console.log(response.data);
-      sessionStorage.setItem("user", JSON.stringify(res.data.user));
+      toast.success("Signup Success");
     } catch (error) {
       console.error(error);
+      toast.error("Signup Failed");
     }
   };
 

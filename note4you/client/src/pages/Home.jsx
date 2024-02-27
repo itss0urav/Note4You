@@ -1,7 +1,21 @@
-import React from 'react'
-
+import React from "react";
+import v3 from "../assets/v3.mp4";
+import Navbar from "../components/Navbar";
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <div className="relative">
+        <video
+          autoPlay
+          muted
+          loop
+          src={v3}
+          className=" absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
+        ></video>
+        <div className="">
+          <Navbar />
+        </div>
+      </div>
+    </div>
+  );
 }

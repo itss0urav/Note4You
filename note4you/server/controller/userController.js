@@ -21,8 +21,8 @@ const postUser = async (req, res) => {
 
 const getUser = async (req, res) => {
   try {
-    const { username, password } = req.body;
-    const user = await User.findOne({ username });
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
     if (!user) {
       return res.status(400).json({ passed: false, message: "User not found" });
     }
