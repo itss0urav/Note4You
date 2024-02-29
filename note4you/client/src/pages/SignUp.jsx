@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "../config/axios";
 import v3 from "../assets/v3.mp4";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import { toast } from "react-hot-toast";
 
 export default function SignUp() {
+  const nav = useNavigate();
+
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -30,6 +33,9 @@ export default function SignUp() {
       const response = await axios.post("/usersignup", user);
       console.log(response.data);
       toast.success("Signup Success");
+      setTimeout(() => {
+        nav("/login");
+      }, 1000);
     } catch (error) {
       console.error(error);
       toast.error("Signup Failed");

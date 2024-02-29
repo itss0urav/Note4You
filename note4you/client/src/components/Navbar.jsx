@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* User info or login button */}
           {user ? (
             <div className="flex items-center">
-              <div className="text-cyan-400 mr-4">{user.username}</div>
+              <div className="text-cyan-400 mr-4 font-bold">{user.username}</div>
               <button
                 onClick={handleLogout}
                 className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

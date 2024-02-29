@@ -32,7 +32,7 @@ export default function Login() {
       // Simulate successful login
       setTimeout(() => {
         nav("/home");
-      }, 2000);
+      }, 1000);
     } catch (error) {
       console.error(error);
     }
