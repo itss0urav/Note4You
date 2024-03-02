@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "../config/axios";
 import v3 from "../assets/v3.mp4";
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/Note4You.png";
 
 import { toast } from "react-hot-toast";
 
@@ -27,18 +28,20 @@ export default function SignUp() {
     // Make sure to validate the user input and passwords match
     if (user.password !== user.confirmPassword) {
       alert("Passwords do not match");
-      return;
-    }
-    try {
-      const response = await axios.post("/usersignup", user);
-      console.log(response.data);
-      toast.success("Signup Success");
-      setTimeout(() => {
-        nav("/login");
-      }, 1000);
-    } catch (error) {
-      console.error(error);
-      toast.error("Signup Failed");
+    } else if (user.password.length < 8) {
+      alert("Password too short");
+    } else {
+      try {
+        const response = await axios.post("/usersignup", user);
+        console.log(response.data);
+        toast.success("Signup Success");
+        setTimeout(() => {
+          nav("/login");
+        }, 1000);
+      } catch (error) {
+        console.error(error);
+        toast.error("SIgnup failed ! Make sure username and email are unique");
+      }
     }
   };
 
@@ -53,7 +56,7 @@ export default function SignUp() {
       ></video>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className=" backdrop-blur-md p-2 rounded-md flex items-center mb-6 text-2xl font-semibold text-white ">
-          <img src="" className="w-8 h-8 mr-2" alt="logo" />
+          <img src={logo} className="w-8 h-8 mr-2" alt="logo" />
           Note4You
         </div>
         <div className="w-full   shadow backdrop-blur-md rounded-md md:mt-0 sm:max-w-md xl:p-0 ">
@@ -134,30 +137,7 @@ export default function SignUp() {
                   onChange={handleChange}
                 />
               </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="remember"
-                      aria-describedby="remember"
-                      type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 "
-                      required=""
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label for="remember" className="text-sky-300">
-                      Remember me
-                    </label>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  className="text-sm font-medium text-sky-600  hover:underline "
-                >
-                  Forgot password?
-                </a>
-              </div>
+
               <button
                 type="submit"
                 className=" bg-black hover:bg-slate-400 hover:bg-opacity-25 bg-opacity-25 w-full text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center "

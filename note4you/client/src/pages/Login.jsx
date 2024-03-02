@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import v3 from "../assets/v3.mp4";
 import axios from "../config/axios";
 import { toast } from "react-hot-toast";
-
+import logo from "../assets/Note4You.png"
 export default function Login() {
   const [user, setUser] = useState({
     email: "",
@@ -35,6 +35,9 @@ export default function Login() {
       }, 1000);
     } catch (error) {
       console.error(error);
+      toast.error(
+        "failed to login! Make sure you have entered correct credentials"
+      );
     }
   };
 
@@ -49,7 +52,7 @@ export default function Login() {
       ></video>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className=" backdrop-blur-md p-2 rounded-md flex items-center mb-6 text-2xl font-semibold text-white ">
-          <img src="" className=" w-8 h-8 mr-2" alt="logo" />
+          <img src={logo} className=" w-8 h-8 mr-2" alt="logo" />
           Note4You
         </div>
         <div className="w-full shadow backdrop-blur-md rounded-md md:mt-0 sm:max-w-md xl:p-0 ">

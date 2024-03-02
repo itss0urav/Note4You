@@ -5,6 +5,12 @@ const User = require("../models/userModel");
 const postUser = async (req, res) => {
   try {
     const { username, email, password } = req.body;
+    const userFromDatabase = await User.findOne({ username });
+    if (userFromDatabase) {
+      return res
+        .status(400)
+        .json({ message: "User already exists with same username!" });
+    }
     const hashPass = await bcrypt.hash(password, 10);
     const newUser = await User.create({
       username,

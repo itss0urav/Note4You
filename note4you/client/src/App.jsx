@@ -7,8 +7,14 @@ import SignUp from "./pages/SignUp";
 import { Toaster } from "react-hot-toast";
 import CreateNotes from "./pages/CreateNotes";
 
-
 export default function App() {
+  console.log(
+    " Hi there :) Find me Here \n GitHub: 👉https://github.com/itss0urav",
+    " \n LinkedIn: 👉https://www.linkedin.com/in/itssourav/",
+    " \n Instagram: 👉https://www.instagram.com/itssourav.dev/",
+    " \n Medium: 👉https://itss0urav.medium.com/"
+  );
+
   return (
     <div>
       <div>
@@ -17,11 +23,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/Home" element={<Home />} />
-          <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/" element={<Introduction />} />
+          <Route path="/SignUp" element={<SignUp />} />
           <Route path="/createnote" element={<CreateNotes />} />
-
         </Routes>
       </BrowserRouter>
     </div>

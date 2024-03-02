@@ -9,7 +9,7 @@ axios.interceptors.request.use(
   (config) => {
     // Retrieve your JWT token from sessionStorage
     const token = JSON.parse(sessionStorage.getItem("token"));
-    console.log("token from axios", token);
+    // console.log("token from axios", token);
 
     // If the token is not null, set it in the headers
     if (token) {

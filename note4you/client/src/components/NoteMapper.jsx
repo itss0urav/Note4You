@@ -15,7 +15,7 @@ export default function NoteMapper() {
   const fetchNotes = async () => {
     try {
       const response = await axios.get("/note/view");
-      console.log("Response data:", response.data); // Debugging
+      // console.log("Response data:", response.data); // Debugging
       if (response.data.passed === true && Array.isArray(response.data.notes)) {
         const filteredNotes = response.data.notes.filter(
           (notes) => notes.author === user.username
